@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "c0359b1f-31c5-4b7b-9d6c-8a1675758b09",
+		"name": "Covid_Cases_Digital_Innovation_One",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All cases",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/covidcase",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"covidcase"
+					]
+				},
+				"description": "Retorna todos os casos de Covid-19"
+			},
+			"response": []
+		},
+		{
+			"name": "Add New CovidCase",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"id\": \"3\",\r\n        \"age\": 38,\r\n        \"numberOfFamilyMembers\": 2,\r\n        \"socialIsolation\": false,\r\n        \"physicalExercise\": false,\r\n        \"wearMask\": true,\r\n        \"homework\": true,\r\n        \"maritalStatus\": \"SOLTEIRO\",\r\n        \"race\": \"BRANCA\",\r\n        \"sex\": \"FEM\",\r\n        \"meansOfTransportation\": \"PUBLICO\",\r\n        \"symptoms\": \"CANSADO\",\r\n        \"country\": \"BR\",\r\n        \"states\": \"GO\",\r\n        \"district\": \"Setor Marista\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/covidcase",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"covidcase"
+					]
+				},
+				"description": "Adiciona um novo caso de covid-19"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete CovidCase",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/covidcase/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"covidcase",
+						"2"
+					]
+				},
+				"description": "Deleta um determinado caso de covid-19. Deve-se prever restrições para a exclusão de determinado caso de covid"
+			},
+			"response": []
+		}
+	]
+}
